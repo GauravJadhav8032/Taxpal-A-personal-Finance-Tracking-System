@@ -1,7 +1,7 @@
 // ---------- 1) Load .env BEFORE anything else ----------
 import path from "path";
 import fs from "fs";
-import dotenv from "dotenv";
+import * as dotenv from "dotenv";
 
 // Load .env from common locations
 const candidates = [
