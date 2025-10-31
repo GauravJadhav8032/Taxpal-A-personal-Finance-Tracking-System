@@ -2,16 +2,18 @@
   "name": "taxpal-server",
   "version": "1.0.0",
   "description": "TaxPal Backend Server - Personal Finance & Tax Estimator",
-  "main": "src/server.ts",
+  "main": "dist/server.js",
+  "type": "module",
   "scripts": {
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "cookie-parse": "^0.4.0",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "csv-parser": "^3.0.0",
     "date-fns": "^4.1.0",
@@ -67,5 +69,8 @@
     "mongodb"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
