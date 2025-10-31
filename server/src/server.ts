@@ -3,6 +3,9 @@ import path from "path";
 import fs from "fs";
 import * as dotenv from "dotenv";
 
+// compute dirname (use process.cwd() as a safe fallback to avoid import.meta TS module errors)
+const __dirname = process.cwd();
+
 // Load .env from common locations
 const candidates = [
   path.resolve(process.cwd(), ".env"),
